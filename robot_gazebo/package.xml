@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robot_gazebo</name>
+  <version>0.1.0</version>
+  <description>robot gazebo Package</description>
+
+  <maintainer email="jh12351002@gmail.com"></maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>launch_ros</build_depend>
+
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>gazebo_plugins</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_pkgs</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
+  <exec_depend>gazebo_ros2_control</exec_depend>
+  <exec_depend>ros2_control</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
+
+  <depend>joint_trajectory_controller</depend>
+  <depend>effort_controllers</depend>
+
+
+  <build_export_depend>pluginlib</build_export_depend>
+
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

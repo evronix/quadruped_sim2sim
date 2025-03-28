@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robot_description</name>
+  <version>0.1.0</version>
+  <description>go1 description package</description>
+
+  <maintainer email="jh12351002@gmail.com"></maintainer>
+
+  <license>BSD</license>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>launch_ros</build_depend>
+
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>gazebo_plugins</exec_depend>
+  <exec_depend>hector_gazebo_plugins</exec_depend>
+  <exec_depend>hector_sensors_description</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

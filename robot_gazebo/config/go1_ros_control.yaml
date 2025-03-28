@@ -1,0 +1,54 @@
+controller_manager:
+  ros__parameters:
+    use_sim_time: True
+    update_rate: 1000  # Hz
+
+    joint_states_controller:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    joint_effort_controller:
+      type: effort_controllers/JointGroupEffortController
+
+
+      # joint_trajectory_controller/JointTrajectoryController
+      # effort_controllers/JointGroupEffortController
+      # position_controllers/JointGroupPositionController 
+      # 
+
+
+# joint_states_controller:
+#   ros__parameters:
+#     use_sim_time: True
+#     joints:
+#       - ejt_joint
+#     command_interfaces:
+#       - effort
+#     state_interfaces:
+#       - position
+#       - velocity
+#       - effort
+
+joint_effort_controller:
+  ros__parameters:
+    use_sim_time: True
+    joints:
+        - FL_hip_joint
+        - FL_thigh_joint
+        - FL_calf_joint
+        - FR_hip_joint
+        - FR_thigh_joint
+        - FR_calf_joint
+        - RL_hip_joint
+        - RL_thigh_joint
+        - RL_calf_joint
+        - RR_hip_joint 
+        - RR_thigh_joint
+        - RR_calf_joint 
+
+    command_interfaces:
+      - effort
+    state_interfaces:
+      - position
+      - velocity
+      - effort
+
