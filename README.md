@@ -10,7 +10,7 @@ This repository provides an easy-to-use Sim2Sim pipeline for testing and validat
 
 Currently, two pretrained policies are supported:
 
-- **[Walk-These-Ways]**  
+**[Walk-These-Ways]**  
 <img src="https://github.com/user-attachments/assets/9a4557a4-4edb-4af4-af57-21c00eb30f29" width="400" alt="Walk-These-Ways Demo"/>
 
   Margolis, Gabriel B., and Pulkit Agrawal.  
@@ -18,7 +18,7 @@ Currently, two pretrained policies are supported:
   Conference on Robot Learning, PMLR, 2023.  
   👉 [Project Website](https://gmargo11.github.io/walk-these-ways/)
 
-- **[DreamWaQ]**  
+**[DreamWaQ]**  
 <img src="https://github.com/user-attachments/assets/ad6d17cb-c78e-4be6-9121-1067109f52e9" width="400" alt="DreamWaQ Demo"/>
 
   Nahrendra, I. Made Aswin, Byeongho Yu, and Hyun Myung.  
