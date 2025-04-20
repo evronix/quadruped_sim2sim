@@ -13,7 +13,7 @@ pkg_path = get_package_share_path('robot_description')
 default_rviz_config_path = pkg_path / 'rviz/urdf.rviz'
 
 world_path = PathJoinSubstitution(
-        [FindPackageShare("robot_gazebo"), "worlds", "go1_empty.world"]
+        [FindPackageShare("robot_gazebo"), "worlds", "go1_world.world"]
     )
 
 config_path = PathJoinSubstitution(

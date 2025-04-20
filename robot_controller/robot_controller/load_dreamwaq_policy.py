@@ -56,6 +56,14 @@ def quat_rotate_inverse(q, v):
     c = q_vec * torch.bmm(q_vec.view(q.shape[0], 1, 3), v.view(q.shape[0], 3, 1)).squeeze(-1) * 2.0
     return a - b + c
 
+def quat_rotate(q, v):
+    q_w = q[:, -1]
+    q_vec = q[:, :3]
+    a = v * (2.0 * q_w ** 2 - 1.0).unsqueeze(-1)
+    b = torch.cross(q_vec, v, dim=-1) * q_w.unsqueeze(-1) * 2.0
+    c = q_vec * torch.bmm(q_vec.view(q.shape[0], 1, 3), v.view(q.shape[0], 3, 1)).squeeze(-1) * 2.0
+    return a + b + c
+
 
 class CENet(nn.Module):
     def __init__(self, input_dim=225, latent_dim=19):
@@ -139,12 +147,16 @@ class AgentNode(Node):
             dtype=torch.float
         )
         self.dof_pos = torch.zeros((1, 12), dtype=torch.float)
+        self.q_des = torch.zeros((1, 12), dtype=torch.float)
         self.dof_vel = torch.zeros((1, 12), dtype=torch.float)
         self.actions = torch.zeros((1, 12), dtype=torch.float)
+        self.torques = torch.zeros((1, 12), dtype=torch.float)
         self.action_clip = 100.0
+        self.counter = 0
+        
         self.action_scale = 0.25
-        self.Kp = 28.5
-        self.Kd = 0.72
+        self.Kp = 28
+        self.Kd = 0.7
         self.obs_history_length = 5
         self.num_obs_45 = 45
         self.obs_history_buf = torch.zeros((1, self.obs_history_length, self.num_obs_45), dtype=torch.float)
@@ -152,20 +164,22 @@ class AgentNode(Node):
         self.base_quat = torch.tensor([[0, 0, 0, 0]], dtype=torch.float)
         self.gravity_vector = torch.tensor([[0, 0, -1]], dtype=torch.float)
         self.projected_gravity = torch.tensor([[0, 0, 0]], dtype=torch.float)
-        self.commands = torch.tensor([[0.0, 0.0, 0.0]], dtype=torch.float)
+        self.commands = torch.tensor([[0.15, 0.0, 0.0]], dtype=torch.float)
         self.commands_sub = self.create_subscription(
             PoseStamped, '/robot_velocity_command', self.velocity_command_callback, 10
         )
         self.joint_effort_pub = self.create_publisher(
             Float64MultiArray, '/joint_effort_controller/commands', 10
         )
+        self.pos_pub = self.create_publisher(Float64MultiArray, '/policy', 10)
+
         self.imu_sub = self.create_subscription(
             Imu, '/imu_plugin/out', self.imu_callback, 10
         )
         self.joint_sub = self.create_subscription(
             JointState, '/joint_states', self.joint_state_callback, 10
         )
-        self.timer = self.create_timer(0.005, self.control_loop)
+        self.timer = self.create_timer(0.005, self.control_loop) # policy dt : 0.02, PD controller dt : 0.005
         self.get_logger().info(f"AgentNode init done. checkpoint={pt_file}")
 
     def velocity_command_callback(self, msg: PoseStamped):
@@ -179,7 +193,7 @@ class AgentNode(Node):
             [[msg.orientation.x, msg.orientation.y, msg.orientation.z, msg.orientation.w]],
             dtype=torch.float
         )
-        self.projected_gravity = quat_rotate_inverse(self.base_quat, self.gravity_vector)
+        self.projected_gravity = quat_rotate(self.base_quat, self.gravity_vector)
         self.base_ang_vel[0, 0] = msg.angular_velocity.x
         self.base_ang_vel[0, 1] = msg.angular_velocity.y
         self.base_ang_vel[0, 2] = msg.angular_velocity.z
@@ -213,34 +227,42 @@ class AgentNode(Node):
         self.obs_history_buf[:, :-1, :].copy_(temp)
         self.obs_history_buf[:, -1, :] = raw_obs_45
 
-    def control_loop(self):
-        obs_45_raw = self.build_obs_45()
-        if self.obs_rms is not None:
-            obs_45_norm = (obs_45_raw - self.obs_rms.mean) / torch.sqrt(self.obs_rms.var + 1e-4)
-        else:
-            obs_45_norm = obs_45_raw.clone()
-        self.update_ring_buffer(obs_45_raw)
-        if self.obs_rms is not None:
-            obs_history_3d_norm = (self.obs_history_buf - self.obs_rms.mean) / torch.sqrt(self.obs_rms.var + 1e-4)
-        else:
-            obs_history_3d_norm = self.obs_history_buf.clone()
-        obs_history_225_norm = obs_history_3d_norm.reshape(1, -1)
-        with torch.no_grad():
-            h = self.cenet.encoder(obs_history_225_norm)
-            est_vel = h[:, :3]
-            half = (h.shape[1] - 3) // 2
-            mu = h[:, 3:3 + half]
-            latent_19 = torch.cat([est_vel, mu], dim=-1)
-            actor_obs = torch.cat([obs_45_norm, latent_19], dim=-1)
-        with torch.no_grad():
-            raw_actions = self.actor.act_inference(actor_obs)
-        raw_actions = torch.clip(raw_actions, -self.action_clip, self.action_clip)
-        actions_scaled = raw_actions * self.action_scale
-        actions_scaled[:, [0, 3, 6, 9]] *= 0.5
-        q_des = actions_scaled + self.default_dof_pos
-        torques = self.Kp * (q_des - self.dof_pos) - self.Kd * self.dof_vel
-        self.publish_torques(torques[0])
-        self.actions = raw_actions.clone()
+    def control_loop(self): # step
+        if self.counter % 4 == 0:
+            
+            obs_45_raw = self.build_obs_45()
+            if self.obs_rms is not None:
+                obs_45_norm = (obs_45_raw - self.obs_rms.mean) / torch.sqrt(self.obs_rms.var + 1e-6)
+            else:
+                obs_45_norm = obs_45_raw.clone()
+            self.update_ring_buffer(obs_45_raw)
+            if self.obs_rms is not None:
+                obs_history_3d_norm = (self.obs_history_buf - self.obs_rms.mean) / torch.sqrt(self.obs_rms.var + 1e-6)
+            else:
+                obs_history_3d_norm = self.obs_history_buf.clone()
+            obs_history_225_norm = obs_history_3d_norm.reshape(1, -1)
+            with torch.no_grad():
+                h = self.cenet.encoder(obs_history_225_norm)
+                est_vel = h[:, :3]
+                half = (h.shape[1] - 3) // 2
+                mu = h[:, 3:3 + half]
+                latent_19 = torch.cat([est_vel, mu], dim=-1)
+                actor_obs = torch.cat([obs_45_norm, latent_19], dim=-1)
+            with torch.no_grad():
+                raw_actions = self.actor.act_inference(actor_obs)
+            raw_actions = torch.clip(raw_actions, -self.action_clip, self.action_clip)
+            actions_scaled = raw_actions * self.action_scale
+            actions_scaled[:, [0, 3, 6, 9]] *= 0.5
+            self.q_des =  self.default_dof_pos + actions_scaled
+            #print(f"des", self.default_dof_pos + actions_scaled)
+            
+            self.pos_pub.publish(Float64MultiArray(data=[float(x) for x in self.q_des[0]])) 
+            
+            self.actions = raw_actions.clone()
+            self.counter = 0
+        self.torques = self.Kp * (self.q_des - self.dof_pos) - self.Kd * self.dof_vel
+        self.publish_torques(self.torques[0])
+        self.counter +=1
 
     def publish_torques(self, torques_1d):
         msg = Float64MultiArray()
@@ -250,7 +272,7 @@ class AgentNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    pt_file = "/home/kjh/sim2sim_quadruped/src/policy_model/dreamwaq/model_2000.pt"
+    pt_file = "/home/kjh/quadruped_sim2sim/policy_model/dreamwaq/model_5000.pt"
     if not os.path.isfile(pt_file):
         print(f"{pt_file} not found!")
         sys.exit(0)
