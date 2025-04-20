@@ -19,7 +19,7 @@ Currently, two pretrained policies are supported:
   👉 [Project Website](https://gmargo11.github.io/walk-these-ways/)
 
 **[DreamWaQ]**  
-<img src="https://github.com/user-attachments/assets/ad6d17cb-c78e-4be6-9121-1067109f52e9" width="400" alt="DreamWaQ Demo"/>
+<img src="https://github.com/user-attachments/assets/86fa960f-357e-4b9b-a901-a41f0dd0195d" width="600" alt="DreamWaQ Demo"/>
 
   Nahrendra, I. Made Aswin, Byeongho Yu, and Hyun Myung.  
   _"DreamWaQ: Learning robust quadrupedal locomotion with implicit terrain imagination via deep reinforcement learning."_  
