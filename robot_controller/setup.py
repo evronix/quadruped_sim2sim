@@ -27,6 +27,7 @@ setup(
         'console_scripts': [
             'run_wtw_policy = robot_controller.load_wtw_policy:main',
             'run_dreamwaq_policy = robot_controller.load_dreamwaq_policy:main',
+            'run_him_policy = robot_controller.load_him_policy:main',
         ],
     },
 )

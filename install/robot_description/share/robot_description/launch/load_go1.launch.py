@@ -1,1 +1,0 @@
-/home/kjh/github_robot_sim/quadruped_sim2sim/robot_description/launch/load_go1.launch.py

@@ -1,6 +1,0 @@
-setuptools
-torch
-numpy
-rclpy
-sensor_msgs
-trajectory_msgs
