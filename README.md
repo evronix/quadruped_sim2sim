@@ -8,7 +8,7 @@ Deploying quadruped robot policies trained in Isaac Gym to ROS2 Gazebo for Sim-t
 
 This repository provides an easy-to-use Sim2Sim pipeline for testing and validating reinforcement learning (RL) policies of quadruped robots within the **ROS2 Gazebo** environment.
 
-Currently, two pretrained policies are supported:
+Currently, three pretrained policies are supported:
 
 **[Walk-These-Ways]**  
 <img src="https://github.com/user-attachments/assets/9a4557a4-4edb-4af4-af57-21c00eb30f29" width="400" alt="Walk-These-Ways Demo"/>
