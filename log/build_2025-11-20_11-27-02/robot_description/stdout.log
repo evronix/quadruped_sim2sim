@@ -1,0 +1,58 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/launch/load_go1.launch.py
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/Asc.stl
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/calf.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/hip.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/thigh.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/thigh_mirror.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/trunk.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/trunk_A1.png
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/calf.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/calf.stl
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/depthCamera.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/hip.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/hip.stl
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/test/trunk.stl
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/thigh.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/thigh.stl
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/thigh_mirror.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/thigh_mirror.stl
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/trunk.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/trunk.stl
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/ultraSound.dae
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/rviz/urdf.rviz
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/urdf/go1/go1.urdf.xacro
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/environment/path.sh
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/environment/path.dsv
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/local_setup.bash
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/local_setup.sh
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/local_setup.zsh
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/local_setup.dsv
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/package.dsv
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/ament_index/resource_index/packages/robot_description
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+-- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/package.xml

@@ -1,0 +1,3 @@
+[console_scripts]
+run_ui = robot_UI.UI_controller:main
+

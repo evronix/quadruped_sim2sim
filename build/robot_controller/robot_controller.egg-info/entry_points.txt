@@ -1,0 +1,4 @@
+[console_scripts]
+run_dreamwaq_policy = robot_controller.load_dreamwaq_policy:main
+run_wtw_policy = robot_controller.load_wtw_policy:main
+

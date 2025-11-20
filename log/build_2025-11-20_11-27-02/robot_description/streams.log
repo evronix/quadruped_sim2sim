@@ -1,0 +1,64 @@
+[0.366s] Invoking command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake /home/kjh/github_robot_sim/quadruped_sim2sim/robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description
+[0.488s] -- The C compiler identification is GNU 11.4.0
+[0.549s] -- The CXX compiler identification is GNU 11.4.0
+[0.560s] -- Detecting C compiler ABI info
+[0.602s] -- Detecting C compiler ABI info - done
+[0.609s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.610s] -- Detecting C compile features
+[0.610s] -- Detecting C compile features - done
+[0.612s] -- Detecting CXX compiler ABI info
+[0.655s] -- Detecting CXX compiler ABI info - done
+[0.662s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.662s] -- Detecting CXX compile features
+[0.662s] -- Detecting CXX compile features - done
+[0.666s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.028s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.069s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.134s] -- Configuring done (0.7s)
+[1.135s] -- Generating done (0.0s)
+[1.135s] -- Build files have been written to: /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description
+[1.140s] Invoked command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake /home/kjh/github_robot_sim/quadruped_sim2sim/robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description
+[1.142s] Invoking command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake --build /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description -- -j20 -l20
+[1.169s] Invoked command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake --build /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description -- -j20 -l20
+[1.215s] Invoking command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake --install /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description
+[1.231s] -- Install configuration: ""
+[1.232s] -- Execute custom install script
+[1.232s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/launch/load_go1.launch.py
+[1.235s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/Asc.stl
+[1.237s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/calf.dae
+[1.238s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/hip.dae
+[1.239s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/thigh.dae
+[1.241s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/thigh_mirror.dae
+[1.243s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/trunk.dae
+[1.245s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/a1/trunk_A1.png
+[1.246s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/calf.dae
+[1.248s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/calf.stl
+[1.250s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/depthCamera.dae
+[1.251s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/hip.dae
+[1.253s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/hip.stl
+[1.255s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/test/trunk.stl
+[1.257s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/thigh.dae
+[1.258s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/thigh.stl
+[1.260s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/thigh_mirror.dae
+[1.261s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/thigh_mirror.stl
+[1.263s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/trunk.dae
+[1.264s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/trunk.stl
+[1.266s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/meshes/ultraSound.dae
+[1.269s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/rviz/urdf.rviz
+[1.270s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/urdf/go1/go1.urdf.xacro
+[1.272s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+[1.274s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+[1.275s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+[1.278s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+[1.279s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/environment/path.sh
+[1.281s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/environment/path.dsv
+[1.283s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/local_setup.bash
+[1.285s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/local_setup.sh
+[1.287s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/local_setup.zsh
+[1.288s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/local_setup.dsv
+[1.290s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/package.dsv
+[1.292s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/ament_index/resource_index/packages/robot_description
+[1.295s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+[1.297s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+[1.298s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_description/share/robot_description/package.xml
+[1.306s] Invoked command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake --install /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_description

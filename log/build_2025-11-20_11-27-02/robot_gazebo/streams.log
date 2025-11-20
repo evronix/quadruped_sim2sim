@@ -1,0 +1,45 @@
+[0.372s] Invoking command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake /home/kjh/github_robot_sim/quadruped_sim2sim/robot_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo
+[0.484s] -- The C compiler identification is GNU 11.4.0
+[0.547s] -- The CXX compiler identification is GNU 11.4.0
+[0.556s] -- Detecting C compiler ABI info
+[0.599s] -- Detecting C compiler ABI info - done
+[0.606s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.606s] -- Detecting C compile features
+[0.606s] -- Detecting C compile features - done
+[0.608s] -- Detecting CXX compiler ABI info
+[0.652s] -- Detecting CXX compiler ABI info - done
+[0.662s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.662s] -- Detecting CXX compile features
+[0.662s] -- Detecting CXX compile features - done
+[0.663s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.035s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.078s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.136s] -- Configuring done (0.7s)
+[1.138s] -- Generating done (0.0s)
+[1.138s] -- Build files have been written to: /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo
+[1.141s] Invoked command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake /home/kjh/github_robot_sim/quadruped_sim2sim/robot_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo
+[1.142s] Invoking command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake --build /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo -- -j20 -l20
+[1.170s] Invoked command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake --build /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo -- -j20 -l20
+[1.212s] Invoking command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake --install /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo
+[1.227s] -- Install configuration: ""
+[1.228s] -- Execute custom install script
+[1.228s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/launch/go1_gazebo.launch.py
+[1.230s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/config/go1_ros_control.yaml
+[1.232s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/worlds/go1_empty.world
+[1.234s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/worlds/go1_world.world
+[1.236s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/ament_index/resource_index/package_run_dependencies/robot_gazebo
+[1.237s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/ament_index/resource_index/parent_prefix_path/robot_gazebo
+[1.239s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/environment/ament_prefix_path.sh
+[1.241s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/environment/ament_prefix_path.dsv
+[1.243s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/environment/path.sh
+[1.245s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/environment/path.dsv
+[1.246s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/local_setup.bash
+[1.248s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/local_setup.sh
+[1.250s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/local_setup.zsh
+[1.251s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/local_setup.dsv
+[1.253s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/package.dsv
+[1.254s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/ament_index/resource_index/packages/robot_gazebo
+[1.256s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/cmake/robot_gazeboConfig.cmake
+[1.257s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/cmake/robot_gazeboConfig-version.cmake
+[1.259s] -- Symlinking: /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_gazebo/share/robot_gazebo/package.xml
+[1.263s] Invoked command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/kjh/.local/bin/cmake --install /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_gazebo

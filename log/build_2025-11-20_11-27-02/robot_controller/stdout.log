@@ -1,0 +1,25 @@
+running develop
+running egg_info
+creating robot_controller.egg-info
+writing robot_controller.egg-info/PKG-INFO
+writing dependency_links to robot_controller.egg-info/dependency_links.txt
+writing entry points to robot_controller.egg-info/entry_points.txt
+writing requirements to robot_controller.egg-info/requires.txt
+writing top-level names to robot_controller.egg-info/top_level.txt
+writing manifest file 'robot_controller.egg-info/SOURCES.txt'
+reading manifest file 'robot_controller.egg-info/SOURCES.txt'
+writing manifest file 'robot_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/lib/python3.10/site-packages/robot-controller.egg-link (link to .)
+Installing run_dreamwaq_policy script to /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/lib/robot_controller
+Installing run_wtw_policy script to /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/lib/robot_controller
+
+Installed /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_controller
+running install_data
+creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/ament_index
+creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/ament_index/resource_index
+creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/ament_index/resource_index/packages
+copying resource/robot_controller -> /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/robot_controller
+creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/robot_controller/rsl_rl
+copying setup.py -> /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/robot_controller/rsl_rl

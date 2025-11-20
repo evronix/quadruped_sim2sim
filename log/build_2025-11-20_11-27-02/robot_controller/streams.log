@@ -1,0 +1,27 @@
+[0.700s] Invoking command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_controller': PYTHONPATH=/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_controller/prefix_override:/home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_controller/build --no-deps install_data
+[0.877s] running develop
+[1.011s] running egg_info
+[1.011s] creating robot_controller.egg-info
+[1.011s] writing robot_controller.egg-info/PKG-INFO
+[1.011s] writing dependency_links to robot_controller.egg-info/dependency_links.txt
+[1.011s] writing entry points to robot_controller.egg-info/entry_points.txt
+[1.011s] writing requirements to robot_controller.egg-info/requires.txt
+[1.011s] writing top-level names to robot_controller.egg-info/top_level.txt
+[1.011s] writing manifest file 'robot_controller.egg-info/SOURCES.txt'
+[1.012s] reading manifest file 'robot_controller.egg-info/SOURCES.txt'
+[1.013s] writing manifest file 'robot_controller.egg-info/SOURCES.txt'
+[1.031s] running build_ext
+[1.031s] Creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/lib/python3.10/site-packages/robot-controller.egg-link (link to .)
+[1.032s] Installing run_dreamwaq_policy script to /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/lib/robot_controller
+[1.032s] Installing run_wtw_policy script to /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/lib/robot_controller
+[1.032s] 
+[1.032s] Installed /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_controller
+[1.032s] running install_data
+[1.032s] creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/ament_index
+[1.032s] creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/ament_index/resource_index
+[1.032s] creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/ament_index/resource_index/packages
+[1.032s] copying resource/robot_controller -> /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/ament_index/resource_index/packages
+[1.032s] copying package.xml -> /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/robot_controller
+[1.032s] creating /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/robot_controller/rsl_rl
+[1.032s] copying setup.py -> /home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/share/robot_controller/rsl_rl
+[1.059s] Invoked command in '/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_controller' returned '0': PYTHONPATH=/home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_controller/prefix_override:/home/kjh/github_robot_sim/quadruped_sim2sim/install/robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/kjh/github_robot_sim/quadruped_sim2sim/build/robot_controller/build --no-deps install_data
