@@ -31,7 +31,7 @@ Currently, three pretrained policies are supported:
 
   Long, J., Wang, Z., Li, Q., Cao, L., Gao, J., & Pang, J.
   _"Hybrid internal model: Learning agile legged locomotion with simulated robot response."_
-  ICLR. 2024
+  ICLR. 2024   
   👉 [Project Website](https://junfeng-long.github.io/HIMLoco/)
   
 ---
