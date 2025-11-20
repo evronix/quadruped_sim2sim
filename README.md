@@ -26,6 +26,14 @@ Currently, two pretrained policies are supported:
   ICRA 2023, IEEE.  
   👉 [Project Website](https://sites.google.com/view/dreamwaq)
 
+**[HIMLoco]**  
+<img src="https://github.com/user-attachments/assets/f5eb67e4-d2c2-4554-8aa2-a80de1372b91" width="600" alt="HIMLoco Demo"/>
+
+  Long, J., Wang, Z., Li, Q., Cao, L., Gao, J., & Pang, J.
+  _"Hybrid internal model: Learning agile legged locomotion with simulated robot response."_
+  ICLR. 2024
+  👉 [Project Website](https://junfeng-long.github.io/HIMLoco/)
+  
 ---
 
 ## Installation
@@ -79,6 +87,12 @@ ros2 run robot_controller run_wtw_policy
 
 ```bash
 ros2 run robot_controller run_dreamwaq_policy
+```
+
+- **HIMLoco**
+
+```bash
+ros2 run robot_controller run_him_policy
 ```
 
 ### 3.Launch the UI
